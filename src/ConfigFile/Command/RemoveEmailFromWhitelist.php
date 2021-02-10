@@ -2,6 +2,7 @@
 
 namespace App\ConfigFile\Command;
 
+use App\ConfigFile\Assert\AssertEmailPattern;
 use Assert\Assert;
 use Assert\Assertion;
 
@@ -11,10 +12,12 @@ final class RemoveEmailFromWhitelist
 
     public function __construct(string $email)
     {
-        Assertion::notBlank($email);
-        Assertion::email($email);
+        $email = \trim($email);
 
-        $this->email = \trim($email);
+        Assertion::notBlank($email);
+        AssertEmailPattern::email($email);
+
+        $this->email = $email;
     }
 
     public function email(): string
