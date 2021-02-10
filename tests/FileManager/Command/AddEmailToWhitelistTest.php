@@ -1,6 +1,6 @@
 <?php
 
-namespace FileManager\Command;
+namespace App\Tests\FileManager\Command;
 
 use App\ConfigFile\Command\AddEmailToWhitelist;
 use PHPUnit\Framework\TestCase;

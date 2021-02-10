@@ -1,6 +1,6 @@
 <?php
 
-namespace FileManager\Command;
+namespace App\Tests\FileManager\Command;
 
 use App\ConfigFile\Command\AddEmailToBlacklist;
 use PHPUnit\Framework\TestCase;
