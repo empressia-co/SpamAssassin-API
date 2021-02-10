@@ -6,6 +6,10 @@ use App\Model\ValueObject;
 
 final class AllowedActions implements ValueObject
 {
+    const ACTION_READ = 'read';
+    const ACTION_WRITE = 'write';
+    const ACTION_REMOVE = 'remove';
+
     /**
      * @var string[]
      */
