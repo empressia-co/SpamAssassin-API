@@ -7,8 +7,9 @@ use App\ConfigFile\FileManager\FileManagerInterface;
 use App\ConfigFile\Parser\WhitelistParserInterface;
 use Assert\Assert;
 use Assert\Assertion;
+use Symfony\Component\Messenger\Handler\MessageHandlerInterface;
 
-final class AddEmailToWhitelistHandler
+final class AddEmailToWhitelistHandler implements MessageHandlerInterface
 {
     private FileManagerInterface $fileManager;
     private WhitelistParserInterface $parser;

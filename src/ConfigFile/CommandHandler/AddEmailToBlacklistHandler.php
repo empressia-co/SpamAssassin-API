@@ -5,8 +5,9 @@ namespace App\ConfigFile\CommandHandler;
 use App\ConfigFile\Command\AddEmailToBlacklist;
 use App\ConfigFile\FileManager\FileManagerInterface;
 use App\ConfigFile\Parser\BlacklistParserInterface;
+use Symfony\Component\Messenger\Handler\MessageHandlerInterface;
 
-final class AddEmailToBlacklistHandler
+final class AddEmailToBlacklistHandler implements MessageHandlerInterface
 {
     private FileManagerInterface $fileManager;
     private BlacklistParserInterface $parser;
