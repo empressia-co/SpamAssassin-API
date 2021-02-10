@@ -4,8 +4,6 @@ namespace App\View;
 
 final class EmailList
 {
-    /** @var ListedEmail[] */
-    public array $emails;
-
-    // todo pagination
+    /** @var string[] */
+    public array $emails = [];
 }
