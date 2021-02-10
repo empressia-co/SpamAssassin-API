@@ -2,7 +2,6 @@
 
 namespace App\ConfigFile\Command;
 
-use Assert\Assert;
 use Assert\Assertion;
 
 final class AddEmailToBlacklist
@@ -14,7 +13,7 @@ final class AddEmailToBlacklist
         Assertion::notBlank($email);
         Assertion::email($email);
 
-        $this->email = $email;
+        $this->email = \trim($email);
     }
 
     public function email(): string

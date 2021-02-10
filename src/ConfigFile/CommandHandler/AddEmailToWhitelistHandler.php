@@ -32,11 +32,11 @@ final class AddEmailToWhitelistHandler
         $file = $this->fileManager->read();
         $emails = $this->parser->getEmailsFromFileContent($file);
 
-        if (\in_array(\trim($command->email()), $emails, true)) {
+        if (\in_array($command->email(), $emails, true)) {
             return;
         }
 
-        $file .= \sprintf('%s%s %s', $this->newLine, $this->directive, \trim($command->email()));
+        $file .= \sprintf('%s%s %s', $this->newLine, $this->directive, $command->email());
 
         $this->fileManager->write($file);
     }

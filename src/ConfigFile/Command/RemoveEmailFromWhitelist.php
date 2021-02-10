@@ -14,7 +14,7 @@ final class RemoveEmailFromWhitelist
         Assertion::notBlank($email);
         Assertion::email($email);
 
-        $this->email = $email;
+        $this->email = \trim($email);
     }
 
     public function email(): string
