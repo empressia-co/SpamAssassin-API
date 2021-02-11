@@ -1,6 +1,7 @@
 {
     "name": "empressia/spamassassin-api",
     "type": "project",
+    "description": "Simple REST API to configure SpamAssassin's whitelists and blacklists.",
     "license": "proprietary",
     "require": {
         "php": ">=7.4.13",
