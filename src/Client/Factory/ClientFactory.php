@@ -4,8 +4,8 @@ namespace App\Client\Factory;
 
 use App\Client\Generator\TokenGeneratorInterface;
 use App\Client\Model\AllowedActions;
-use App\Client\Model\Client;
 use App\Client\Model\ClientInterface;
+use App\Document\Client;
 use Assert\Assertion;
 
 class ClientFactory implements ClientFactoryInterface

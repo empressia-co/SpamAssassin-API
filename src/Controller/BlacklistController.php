@@ -48,7 +48,9 @@ class BlacklistController extends AbstractController
      */
     public function getList(): JsonResponse
     {
-        if (!$client = $this->clientProvider->getClient()) {
+        $client = $this->clientProvider->getClient();
+
+        if (null === $client || !$client->enabled()) {
             return new JsonResponse('Unauthorized', Response::HTTP_UNAUTHORIZED);
         }
 
@@ -72,7 +74,9 @@ class BlacklistController extends AbstractController
      */
     public function addEmail(Request $request): JsonResponse
     {
-        if (!$client = $this->clientProvider->getClient()) {
+        $client = $this->clientProvider->getClient();
+
+        if (null === $client || !$client->enabled()) {
             return new JsonResponse('Unauthorized', Response::HTTP_UNAUTHORIZED);
         }
 

@@ -17,6 +17,20 @@
     "doctrine/lexer": {
         "version": "1.2.1"
     },
+    "doctrine/mongodb-odm-bundle": {
+        "version": "3.3",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "master",
+            "version": "3.3",
+            "ref": "1fd8598bf42227a1c8905edd32f640e4c5d15eff"
+        },
+        "files": [
+            "config/packages/doctrine_mongodb.yaml",
+            "config/packages/prod/doctrine_mongodb.yaml",
+            "src/Document/.gitignore"
+        ]
+    },
     "php": {
         "version": "7.4"
     },
@@ -43,6 +57,18 @@
     },
     "symfony/amqp-messenger": {
         "version": "v5.1.6"
+    },
+    "symfony/apache-pack": {
+        "version": "1.0",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "master",
+            "version": "1.0",
+            "ref": "71599f5b0fdeeeec0fb90e9b17c85e6f5e1350c1"
+        },
+        "files": [
+            "public/.htaccess"
+        ]
     },
     "symfony/browser-kit": {
         "version": "v5.1.6"
@@ -148,7 +174,7 @@
             "repo": "github.com/symfony/recipes",
             "branch": "master",
             "version": "4.3",
-            "ref": "8a2675c061737658bed85102e9241c752620e575"
+            "ref": "e9a414b113ceadbf4e52abe37bf8f1b443f06ccb"
         },
         "files": [
             "config/packages/messenger.yaml"

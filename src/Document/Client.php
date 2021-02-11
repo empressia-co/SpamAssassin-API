@@ -1,15 +1,41 @@
 <?php
 
-namespace App\Client\Model;
+namespace App\Document;
 
+use App\Client\Model\AllowedActions;
+use App\Client\Model\ClientInterface;
 use App\Model\Entity;
+use Doctrine\ODM\MongoDB\Mapping\Annotations as MongoDB;
 
-final class Client implements ClientInterface, Entity
+/**
+ * @MongoDB\Document
+ */
+class Client implements ClientInterface, Entity
 {
+    /**
+     * @MongoDB\Id(strategy="NONE", type="string")
+     */
     private string $name;
+
+    /**
+     * @MongoDB\Field(type="string")
+     * @MongoDB\Index(unique=true)
+     */
     private string $token;
+
+    /**
+     * @MongoDB\Field(type="allowed_actions")
+     */
     private AllowedActions $allowedActions;
+
+    /**
+     * @MongoDB\Field(type="date_immutable")
+     */
     private \DateTimeImmutable $createdAt;
+
+    /**
+     * @MongoDB\Field(type="bool")
+     */
     private bool $disabled;
 
     public function __construct(
