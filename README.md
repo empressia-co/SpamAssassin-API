@@ -1,5 +1,6 @@
 SpamAssassin API
 ==============
+Simple REST API to configure SpamAssassin's whitelists and blacklists.
 
 ## CLI
 ### Clients management
