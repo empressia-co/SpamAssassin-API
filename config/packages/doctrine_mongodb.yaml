@@ -16,3 +16,7 @@ doctrine_mongodb:
                     dir: '%kernel.project_dir%/src/Document'
                     prefix: 'App\Document'
                     alias: App
+
+    types:
+        allowed_actions:
+            class: App\Client\DoctrineType\AllowedActionsType
