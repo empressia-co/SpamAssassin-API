@@ -1,5 +1,7 @@
 SpamAssassin API
 ==============
+![PHP Composer](https://github.com/empressia-dev/SpamAssassin-API/workflows/PHP%20Composer/badge.svg)
+
 Simple REST API to configure SpamAssassin's whitelists and blacklists.
 
 ## CLI
